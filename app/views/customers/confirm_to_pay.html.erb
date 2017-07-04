@@ -65,7 +65,7 @@ table#t01 th {
 
  <center>
 <% if @customer.plan %>
-  <% payment_form_for_payu 'HWtJOJbi', 'gGRdWB3BUZ',
+  <% payment_form_for_payu 'gtKFFx', 'eCwWELxi',
             :txnid => @customer.access_token,
             :amount => @customer.plan.plan_price.to_s,
             :productinfo => 'Fees Payment',

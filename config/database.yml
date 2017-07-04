@@ -82,4 +82,4 @@ production:
   <<: *default
   database: active_admin_cloudcube_production
   username: active_admin_cloudcube
-  password: <%= ENV['ACTIVE_ADMIN_CLOUDCUBE_DATABASE_PASSWORD'] %>
+  password: active_admin_cloudcube

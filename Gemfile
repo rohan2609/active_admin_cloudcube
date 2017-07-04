@@ -12,10 +12,9 @@ gem 'rails', '~> 5.1.2'
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
-
+gem 'activeadmin', github: 'gregbell/active_admin'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'activeadmin'
 gem 'chosen-rails'
 gem 'devise'
 gem 'paperclip'
@@ -30,7 +29,6 @@ gem 'simple_form'
 gem "active_admin_multi_upload"
 gem "font-awesome-rails"
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

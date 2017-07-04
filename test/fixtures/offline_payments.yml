@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer: one
+  plan: one
+  amount: MyString
+  date: 2017-07-04
+  check_number: MyString
+  bank_name: MyString
+  date_on_check: 2017-07-04
+
+two:
+  customer: two
+  plan: two
+  amount: MyString
+  date: 2017-07-04
+  check_number: MyString
+  bank_name: MyString
+  date_on_check: 2017-07-04

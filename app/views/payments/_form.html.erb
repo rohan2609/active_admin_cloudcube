@@ -1,0 +1,22 @@
+<%= simple_form_for(@payment) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :mihpayid %>
+    <%= f.input :txnid %>
+    <%= f.input :status %>
+    <%= f.input :unmappedstatus %>
+    <%= f.input :amount %>
+    <%= f.input :cardCategory %>
+    <%= f.input :email %>
+    <%= f.input :name_on_card %>
+    <%= f.input :issuing_bank %>
+    <%= f.input :payment_mode %>
+    <%= f.association :customer %>
+    <%= f.association :plan %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+<%= simple_form_for(@plan) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :plan_name %>
+    <%= f.input :plan_price %>
+    <%= f.input :plan_rent %>
+    <%= f.input :no_of_days %>
+    <%= f.input :speed %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

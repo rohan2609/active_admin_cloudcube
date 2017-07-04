@@ -11,7 +11,6 @@ def update
   redirect_to customers_path
 end
 
-
   def create
     @customer = Customer.new(customer_params)
     @customer.save

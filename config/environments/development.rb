@@ -54,13 +54,12 @@ Rails.application.configure do
   config.assets.raise_runtime_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-     :address              => "smtp.zoho.com",
-     :port                 => 465,
+     :address              => "smtp.gmail.com",
+     :port                 => 587,
      :domain               => 'https://cloudcube.herokuapp.com',
      :user_name            => 'demo.qset@gmail.com',
      :password             => 'Bhushan@17',
      :authentication       => "plain",
-     :enable_starttls_auto => true,
-     :tls                  => true
+    :enable_starttls_auto => true
     }
 end

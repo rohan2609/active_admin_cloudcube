@@ -56,9 +56,9 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
      :address              => "smtp.gmail.com",
      :port                 => 587,
-     :domain               => 'https://cloudcube.herokuapp.com',
-     :user_name            => 'qset.cloud@gmail.com',
-     :password             => 'qsetcloudc',
+     :domain               => "https://cloudcube.herokuapp.com",
+     :user_name            => ENV["qset.cloud@gmail.com"],
+     :password             => ENV["qsetcloudc"],
      :authentication       => "plain",
      :enable_starttls_auto => true
     }

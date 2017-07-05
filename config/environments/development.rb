@@ -60,7 +60,6 @@ Rails.application.configure do
      :user_name            => 'qset.cloud@gmail.com',
      :password             => 'qsetcloudc',
      :authentication       => "plain",
-     :ssl => true
-    :enable_starttls_auto => true
+     :enable_starttls_auto => true
     }
 end

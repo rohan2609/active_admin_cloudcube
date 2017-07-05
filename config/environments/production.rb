@@ -99,6 +99,6 @@ config.serve_static_assets = true
      :user_name            => 'qset.cloud@gmail.com',
      :password             => 'qsetcloud',
      :authentication       => "plain",
-    :enable_starttls_auto => true
+     :enable_starttls_auto => true
     }
 end

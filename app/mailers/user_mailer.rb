@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-	default from: 'demo.qset@gmail.com'
+	default from: 'qset.cloud@gmail.com'
 
 	 def send_signup_email(user)
     @user = user

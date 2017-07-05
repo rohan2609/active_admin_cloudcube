@@ -1,6 +1,25 @@
 class CustomersController < InheritedResources::Base
 skip_before_action :verify_authenticity_token, :only => [:payu_return]
 
+def new
+  @customer = Customer.new
+end
+
+def update
+  @customer = Customer.find(params[:id])
+  @customer.update(customer_params)
+  redirect_to customers_path
+end
+
+  def create
+    @customer = Customer.new(customer_params)
+    @customer.save
+    redirect_to @customer
+  end
+
+  def show
+    @customer = Customer.find(params[:id])
+  end
 
   def confirm_to_pay
     @customer = Customer.find(params[:id])

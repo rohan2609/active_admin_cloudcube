@@ -12,7 +12,7 @@ gem 'rails', '~> 5.1.2'
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
-gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'activeadmin'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'chosen-rails'

@@ -2,6 +2,7 @@ class Customer < ApplicationRecord
   belongs_to :plan
   has_many :offline_payments
   has_many :payments
+  validates :plan_id, presence: true
   validates :contact, numericality: { only_integer: true }, length: \
           { minimum: 6, maximum: 11 }, allow_blank: true
   validates :address, length: { in: 1..50 }, allow_blank: true

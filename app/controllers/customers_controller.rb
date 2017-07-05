@@ -13,8 +13,11 @@ end
 
   def create
     @customer = Customer.new(customer_params)
-    @customer.save
-      redirect_to customers_path
+    if @customer.save
+    redirect_to customers_path
+  else
+    render 'new'
+  end
   end
 
   def show

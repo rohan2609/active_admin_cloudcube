@@ -6,7 +6,7 @@ class Customer < ApplicationRecord
   validates :contact, numericality: { only_integer: true }, length: \
           { minimum: 6, maximum: 11 }, allow_blank: true
   validates :address, length: { in: 1..50 }, allow_blank: true
-  after_save :create_user_account
+  after_create :create_user_account
   #before_create :set_access_token
 
 
@@ -24,13 +24,12 @@ private
  #    end
  #  end
 
- def create_user_account
+  def create_user_account
     user = User.new do |u|
       u.email = email
       u.password = customer
       u.save
     end
-
   end
 
 end

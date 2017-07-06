@@ -4,16 +4,16 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   
-  after_save :send_signup_email
+  after_create :send_signup_email
 
 
   def send_signup_email
     UserMailer.send_signup_email(self).deliver_now
   end
 
-  def create_user_customer(customer,email)
-    customer.each do |customer|
-      UserCustomer.create(email: email, customer: customer)
+  def create_user_customer(customer_number,email)
+    customer_number.each do |customer_number|
+      UserCustomer.create(email: email, customer_number: customer_number)
     end
   end
 end

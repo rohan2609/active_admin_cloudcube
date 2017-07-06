@@ -11,9 +11,9 @@ class User < ApplicationRecord
     UserMailer.send_signup_email(self).deliver_now
   end
 
-  def create_user_customer(customer_number,email)
-    customer_number.each do |customer_number|
-      UserCustomer.create(email: email, customer_number: customer_number)
+  def create_user_customer(customer,email)
+    customer.each do |customer|
+      UserCustomer.create(email: email, customer: customer)
     end
   end
 end

@@ -27,7 +27,7 @@ end
     payment = @customer.payments.build(
       txnid: @customer.access_token,
       plan_id: @customer.plan_id,
-      amount: @customer.try(:plan).try(:plan_price),
+      amount: @customer.try(:plan).try(:plan_rent),
       email: @customer.email,
       status: 'will send request for payment'
       )

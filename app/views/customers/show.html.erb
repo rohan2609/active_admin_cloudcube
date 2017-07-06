@@ -54,7 +54,7 @@ table#t01 th {
         <td><center><b><%= @customer.date%></b></center></td>
         <td><center><b><%= @customer.try(:plan).try(:plan_name) %></b></center></td>
         <td><center><b><%= @customer.date+ @customer.plan.no_of_days.to_i.days if @customer.plan %></b></center></td>
-        <td><center><b><%= @customer.try(:plan).try(:plan_price) %></b></center></td>
+        <td><center><b><%= @customer.try(:plan).try(:plan_rent) %></b></center></td>
     </tr>
     
 

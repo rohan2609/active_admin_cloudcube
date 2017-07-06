@@ -21,8 +21,9 @@ form do |f|
       f.input :bank_name
       f.input :check_number
       f.input :amount
-      f.input :date
-      f.input :date_on_check
+      f.input :date,:as => :datetime_picker,  :input_html => {:value => Date.today}
+      f.input :date_on_check,as: :datetime_picker
+
 end
   f.actions
 end
@@ -37,7 +38,10 @@ index do
   column :bank_name
   column :check_number
   column :amount
+   actions defaults: false do |offline_payment|
+   a "View", href: admin_offline_payment_path(offline_payment)
+   item "Edit", edit_admin_offline_payment_path(offline_payment)
   end
-
+end
 
 end

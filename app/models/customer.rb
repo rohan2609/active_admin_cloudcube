@@ -25,11 +25,12 @@ private
  #  end
 
   def create_user_account
-    user = User.new do |u|
-      u.email = email
-      u.password = customer
-      u.save
-    end
+    User.create!(email: self.email, password: self.customer)
+    # user = User.new do |u|
+    #   u.email = email
+    #   u.password = customer
+    #   u.save
+    # end
   end
 
 end

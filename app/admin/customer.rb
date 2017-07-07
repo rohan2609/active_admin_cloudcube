@@ -44,4 +44,20 @@ form do |f|
   
  end
 end
+
+
+show do
+  attributes_table do
+    row :customer
+    row :fullname
+    row :date
+    row :address
+    row :pincode
+    row :contact
+    row :plan_id, :as => :select, :collection => Plan.all.map{|p| [p.plan_name,p.id]}
+    row :status
+    row :email
+  end
+end
+
 end
